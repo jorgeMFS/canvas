@@ -1,2 +1,2 @@
-# canvas
-Complexity Analisys Viral Sequences
+# CANVAS
+Complexity ANalisys VirAl Sequences
