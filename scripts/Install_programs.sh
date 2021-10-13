@@ -11,7 +11,7 @@ Check_Installation() {
 }
 
 
-echo "Start Installation..."
+echo "\033[1mStart Installation...\033[0m"
 
 conda install -c cobilab gto --yes
 conda install -y -c bioconda geco3
@@ -25,5 +25,4 @@ conda install -c conda-forge xgboost
 Check_Installation "gto";
 Check_Installation "GeCo3";
 Check_Installation "efetch";
-
-# statsmodels
+echo -e "\033[1;32mSuccessfully installed tools!\033[0m";
