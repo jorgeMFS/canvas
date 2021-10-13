@@ -1,0 +1,11 @@
+biopython==1.76
+ete3==3.1.1
+glob2==0.5
+mpmath==0.19
+numpy==1.19.5
+pyaml==16.12.2
+pybdm==0.1.0
+seaborn==0.10.1
+networkx==2.5.1
+openpyxl==3.0.9
+matplotlib==3.2.2
