@@ -397,6 +397,15 @@ def various_trees(meta_information_list,avg_list, root, name,sci,save_labels,sav
         save_labels=name.split("_")[0]
         create_original_tree(met,avg_list_used, root,sv_name,sci,save_labels)
 
+def change_tree_branch(node_list, rgb_color, dst):
+    val=8-int(dst)
+    style1=NodeStyle()
+    style1["vt_line_width"] = val*40
+    style1["hz_line_width"] = val*40
+    style1["vt_line_color"] = rgb_color
+    style1["hz_line_color"] = rgb_color
+    for node in node_list:
+        node.set_style(style1)
 
 def newickify(node_to_children, root_node) -> str:
     visited_nodes = set()
