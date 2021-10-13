@@ -1,0 +1,657 @@
+L3
+N389_gp01
+PfdVgp1
+PA66
+K77B-11
+SlnV2_gp001
+MMTVgp1
+SmvBgp1
+BEFVgs01
+HMP:9847
+TaV3gp01
+N271_gp01
+BFPyV_gp1
+P14.1
+2263
+B42
+BLVgp01
+cell line ATCC CCL-108
+pTCV-[103,129]
+B49
+B51
+B40
+B17
+B45
+unknown
+CSDaVgp1
+F373_gp001
+c can be cc
+385-99
+CRB496
+TMGMVgp1
+BMMVgp1
+VESVgp1
+PeMoVgp1
+1
+B64
+mat
+ISKNV
+C12
+DF52_gp001
+EMVgp1
+VD1
+F65
+B62
+pSH1_01
+L2
+CSMVgp1
+H388_gp01
+HWD11_gp001
+0553
+05TGP00369
+2
+20
+257
+3
+3'-terminal leader sequence
+325
+4
+4077-89
+43 female mosquito pool
+45AZ5
+5
+5' LTR
+5' LTR U5 region
+5' leader
+5' terminal redundancy
+5004
+55
+6
+7
+8
+9
+94233
+A
+A component
+A2
+A3
+A3/3, A3/2
+A34
+A4
+A5
+A6
+A7
+A8
+A9
+ALOHA
+AO
+ATCC:PV522
+ATCC:VR-865
+ATCC:VR-895
+ATCC:VR-940
+AU58
+B
+B component
+B2
+B20
+B22
+B23
+B24
+B25
+B26
+B27
+B28
+B29
+B3
+B30
+B32
+B33
+B34
+B35
+B36
+B37
+B38
+B39
+B4
+B43
+B44
+B46
+B47
+B48
+B5
+B50
+B52
+B53
+B54
+B55
+B56
+B57
+B58
+B59
+B6
+B60
+B63
+B65
+B7
+B8
+B9
+BAD327
+BEBV_gp3
+BGMV-DR
+BPV5
+C2
+C20
+C22
+C3
+C4
+C5
+C6
+C7
+C8
+C9
+CA2
+CAP
+CP
+Circle 2
+Circle 20
+Circle 22
+Circle 23
+Circle 25
+Circle 26
+Circle 3
+Circle 30
+Circle 32
+Circle 33
+Circle 35
+Circle 36
+Circle 4
+Circle 5
+Circle 6
+Circle 7
+Circle 8
+Circle 9
+D2
+D3
+D380, D600, D75, D280, D54, D4, D20, D33, D69, 462b, 702b, 572c, 772c, 462c
+D4
+D5
+D6
+D7
+E6
+E8
+G3
+G4p03
+H isolate
+H2N2
+H3N2
+H77
+H7N9
+H9N2
+HCoSV-F
+HHBVgp2
+HLV sequence
+HMP:9774
+Hungarian
+ITR
+Ib
+Ind3
+JKI-2000
+JKT-6423
+JM356
+JT
+K87
+L
+LE6
+LP037_043
+LSV2_VN3
+M
+M2
+M3
+MPC/04
+MSV-Ama
+MlDNV_NS
+N
+NA
+NCGR MEN 454
+NDUV_gp4
+NE Providence Channel
+NMV genome excluding the 3' poly-A tail
+NP
+NS
+NS2
+O
+OC43
+OP
+ORF 2
+ORFB
+ORFD
+PLCVAI, PLCVAII, PLCVAIII
+POLY
+PUR46-MAD
+R
+Raji
+RdRp
+RhPV
+S
+S2
+S3
+S4
+SCSMaV
+SCVP86
+SESV_gp4
+SFV4
+SP5
+SPLCSPV-[BR:AlvM:09]
+SPgVkrc_RC08
+T domain
+TATA_box
+TCH
+TN05-76
+V2
+VD2
+VDV-2
+VDV-3
+WHAV_gp4
+WMHBV-2
+XIII
+YN4980
+ZGMMV-K
+a
+aag in wild type; gac in PI-A
+av2
+clc802a
+clc806b
+cos
+fig
+gag
+gag-FOS
+gag-pro-pol-env
+gap-pro-pol
+gyrA
+int
+pA4 and pA5
+pC9
+pCoYMV89 (and pCoYMV89)
+pDEG98.
+pF2
+pFMV Sc3
+pHRCT
+pHSK3
+pTIL05
+pUR2
+pYD38-A
+pYD38-B
+pol
+pol4
+pol5
+pol6
+polh
+rDEN4
+rIIA
+vector:pSJ2TK30
+0.1
+001R
+02394-01
+06-Jun-2012
+09-10-8
+10
+1014-2016-2
+11
+111
+12
+13
+14
+159-1
+16
+18KDa coat protein
+19
+1981
+1L
+1a
+201
+5' UTR of CTV has approximately the same size as the respective UTRs of other closteroviruses, however it has no sequence similarity to them
+79-1146
+94221
+95122
+A1
+A10
+AAV1
+ACLSVgp1
+ACQ54_gp001
+ACQ60_gp001
+ACT19_gp1
+AG16
+AGMPyVgp1
+ALPVgp1
+AMVITR01a
+AOPRV_gp1
+APL41_gp01
+APL46_gp001
+APMV-15/WB/Kr/UPO216/2014
+APVgp1
+ASGV_gp1
+ASNV_gp001
+ATCC CRL 1581
+ATCC:19685-B1
+ATCC:51477-B1
+ATCC:51908
+ATCC:PV-491
+ATCC:PV81
+ATCC:VR-1354
+ATCC:VR-1449
+ATCC:VR-1559
+ATCC:VR-191
+ATCC:VR-195
+AU097_gp001
+AURAVgp1
+AVT76_gp01
+AVV36_gp001
+AVYV_gp1
+AdDNV_gp1
+B1
+B10
+B11
+B12
+B13
+B14
+B15
+B16
+B18
+B19
+B21
+B31
+B41
+B61
+BG-1
+BLRVgp1
+BOOMER_1
+BPS10C_001
+BPV2_gp1
+BRRVgp1
+BYDVGAVgp1
+Baccatum-9
+Bbsvgp1
+BcepB1A gene01
+BcepMu01
+C1
+C10
+C11
+C13
+C14
+C15
+C16
+C17
+C18
+C19
+C21
+CAVgp1
+CBvgp1
+CERVgp1
+CFDNVgORF149
+CG91_gp001
+CGRMVgp1
+CMMV_gp1
+CMVX_gp1
+COGV_gp001
+CORV-MRM1
+CPMVs2gp1
+CPTMiller_001
+CSSVgp1
+CSVgp1
+CVAgp1
+CYDVRPSgp1
+CYMVgp1
+Circle 1
+Circle 10
+Circle 11
+Circle 12
+Circle 13
+Circle 14
+Circle 15
+Circle 17
+Circle 18
+Circle 19
+Circle 21
+Circle 31
+DSM:8691
+DSMZ:28572
+DSMZ:28789
+DSMZ:PV-0517
+DSVgp1
+DaRv1gp1
+D1
+D1P45_gp1
+D1T53_sSgp1
+E1
+EV-A114
+EVCV_gp1
+Eb-RV1
+EcPV-2_gp1
+DuMV_gp1
+F486_gp01
+F8202_gp1
+FDH89_gp01
+FDI19_gp01
+FDI88_gp01
+FF15_gp001
+FHS7A2
+FHVgp1
+FO1
+FP7, H3, T21, CP21 and TP11
+FP70_gp01
+FPV
+G172_gp01
+GSHVgp1
+H123990006
+H1N1
+H1O14_gp01
+H379_gp01
+H380_gp01
+H387_gp01
+H5N1
+HAVgs1
+HAZ1-4
+HCoV-EMC/2012
+HEVAgp1
+HGV1gp1
+HGvAgp1
+HK022p01
+HKG-PF080915
+HOS17_gp01
+HOT12_gp01
+HOV51_gp001
+HPIV3gp1
+HS103/06
+HTLV1gp1
+HTNVsMgp1
+HTNVsSgp1
+HVAV3e_gp001
+HWB03_gp01
+HWB17_gp01
+HWB18_gp01
+HWD09_gp001
+HWD12_gp001
+HWD13_gp001
+HWD53_gp01
+HYO71_gp01
+HYO76_gp01
+HaGV_gp001
+Amvgp1
+ChchNPV
+HpV4gp1
+HpV63gp1
+HuTLCV_gp1
+IAPVOB_gp1
+IFVgp1
+IIV6gp001
+JCV/61/CO-cl
+JCVd 1
+KPP10_gp001
+KT10BII
+L1
+LO1
+LP030nr2_001
+LP110_001
+LP125_198
+LSV1_SA
+LY117
+M0719
+M1
+M102_gp01
+M93-1
+MAYVgp1
+MC001R
+MLVgp1
+MOV1_gp1
+MT1-5
+MiMVgp1
+MiSVgp2
+N310S
+N388_gp01
+N390_gp01
+NLNVgp01
+NS1
+OAdVAgp01
+OBDVgp1
+OCSVgp1
+ON1
+OP1_ORF1
+OP2_ORF1
+OPV1gp1
+ORF001L
+ORF1
+ORF1a
+OYMVgp1
+V1
+S1
+U2
+R14
+[1]
+rep
+P21
+UK-F
+terS
+Gr10
+SP_1
+Pi-15
+Ovgp1
+UK661
+CmYLCV
+SFVgp1
+SAa-01
+OlVgp1
+pAT153
+TMVgp1
+SAa-10
+CePaCT
+pHN419
+pMFL12
+TEVgp1
+RSVgp1
+Porky_1
+SINVgp1
+Hosp_01
+STP-A11
+RTSVgp1
+RGHBVp1
+Mvocgp1
+CrPVgp1
+PoLVgp1
+Red Sea
+MpdVgp1
+Ncbvgp1
+CuNVgp1
+WhBvgp1
+SeMVgp1
+TuMVgp1
+PnMVgp1
+TVMVgp1
+YMTVg1L
+TYMVgp1
+PLRVgp1
+FuSVgp1
+RopVgp1
+WSMVgp1
+SV40gp1
+ShVXgp1
+RgMVgp1
+pSTNV-1
+MoMSVgp1
+Sfi11p01
+EppoMNPV
+SPMMVgp1
+TAV2_gp1
+SSV-1p01
+SrMV_gp1
+ST32HC_1
+CarMVgp2
+Cfmmvgp1
+Oct-2009
+JcDNVgp1
+SsRv2gp1
+PRRSVgp1
+case H10
+PHIKZ001
+YS40_001
+pCOL3.12
+SsRv1gp1
+SPP1p001
+Kostya_1
+clP1_001
+orf1a/1b
+PBI_U2_1
+PSSP7_001
+PlMoV_gp1
+PhopGV001
+CymRSVgp1
+Ihahnvgp1
+U5 region
+X917_gp01
+LY11
+PVYgp1
+RABVgp1
+beta C1
+ST40AC_1
+SRSM4_001
+Grslavgp1
+isolate 2
+SRoBrvgp1
+SenVgp001
+Smwlmvgp1
+Enkoping1
+PepMoVgp1
+Jolie1_01
+Rspav1gp1
+X916_gp01
+Delaware-4
+SPSV3_gp01
+PGVV_00001
+PHAEDRUS_1
+TP21-L_gp1
+TZ-27421_S
+PP141_gp01
+phiX174p01
+GrBNV_gp01
+PepSMV_gp1
+TZ-27421_L
+phiJB_00001
+phi187_gp01
+pPM1-2-47M+
+SAPPV1_gp01
+PMWaV-1_gp1
+HvV190S_gp1
+TNAV2c_gp001
+PaP-PAD20_gp1
+PaP-PAS50_gp1
+Vero-E6 cells
+R006926 CT2015
+pCS[9,19,41,2/47,2/52,157]
+ErPhphiEt88_gp01
+pCV(B1)EE[1,2,3,4]; pCV(B1)KE1; pCV(B1)PP[1,2]
+from MRC Common Cold Unit [1] and American Type Culture Collection [2]
+pBYV p36, x19, R9, R3, 36A, R2, 36, p43, 111-7, 112, 115, 1213, 1210, 124, 1313, 1311, 142, 143, 1311, 1311, 142, 143, 156, 1510, 154, 1518,1520, 169, 1615, 175
+SSL2004-250F
+DisaGV-Parana-2009
+The snakehead retrovirus genome was sequenced from the cell line SSN-1, derived from the striped snakehead fish (Ophicephalus striatus)
+changes relative to the original sequence, GenBank Accession Number J01901, have been detected and verified by several different laboratories
+similar to Autographa californica nuclear polyhedrosis virus (AcMNPV) deposited in GenBank Accession Number L22858
