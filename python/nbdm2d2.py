@@ -5,6 +5,8 @@ import sys
 import numpy as np
 from pybdm import BDM
 from pybdm import options
+import warnings
+warnings.filterwarnings("ignore")
 
 options.set(raise_if_zero=False)
 options.set(warn_if_missing_ctm=False)
