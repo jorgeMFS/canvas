@@ -25,9 +25,10 @@ for directory in  ../VirusDB/Virus_by_taxid/*; do
 done
 rm GCTA
 }
+echo -e "\033[1mMeasuring the GC-Content of genomes in the database......\033[0m"
 
 GC_SEQ REPORT_SEQ_GC
-
+echo -e "\033[1;32mProcess successfully completed!\033[0m"
 
 
 

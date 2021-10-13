@@ -20,7 +20,7 @@ for directory in  ../VirusDB/Virus_by_taxid/*; do
     fi
 done
 }
-
+echo -e "\033[1mMeasuring the length of genomes in the database......\033[0m"
 SEQ_LEN REPORT_SEQ_LEN_T
-
+echo -e "\033[1;32mProcess successfully completed!\033[0m"
 
