@@ -1,3 +1,4 @@
 #Files
-VirusDB/
+!VirusDB/ViralSeq_Org.info
+!VirusDB/ViralSeq_Genome.info
 .vscode/
