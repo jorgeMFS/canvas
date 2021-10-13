@@ -8,5 +8,7 @@ cd scripts/ || exit;
 
 chmod +x ./*.sh
 bash Install_programs.sh 
-pip3 install -r ../requirements.txt
+python3.6 -m pip install --upgrade pip
+python3.6 -m pip install  -r ../requirements.txt
+
 # ./Create_viral_database.sh
