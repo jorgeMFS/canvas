@@ -4,7 +4,7 @@ function SEQ_LEN(){
 
 rm -f ../reports/"$1";
 
-for directory in  ../VirusDB/Virus_by_taxid1/*; do
+for directory in  ../VirusDB/Virus_by_taxid/*; do
     if [ -d "${directory}" ]; then
         dir=$(basename -- "${directory}")
         for file in "${directory}/"*".fasta"; do

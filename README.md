@@ -30,18 +30,24 @@ docker-compose build
 docker-compose up -d && docker exec -it canvas bash && docker-compose down
 ```
 
-
 ## Result Replication
 To run the pipeline and obtain all the Reports in the folder reports, use the following commands.
 
-### Simple Compression Reports
+### Create Features for Analysis and Classification
+To create the features for analysis and classification (very time consuming) run: 
+```bash
+cd scripst || exit;
+bash Process_features.sh
+``` 
+
+### Benchmarck Compression Reports
 To recreate the compression reports used for benchmark (very time consuming) run: 
 ```bash
 cd scripst || exit;
 bash Compress.sh
 ``` 
 
-### Compression Benchmark
+### Compression Benchmark Analysis
 To obtain the Compression Benchmark plots run:
 ```bash
 cd python || exit;
