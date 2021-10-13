@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  src:
+    container_name: canvas
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/cv/
