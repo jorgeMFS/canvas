@@ -86,6 +86,12 @@ cd scripts || exit;
 bash Herpersvirales.sh
 ``` 
 
+### Phylogenetic Trees
+To obtain the Phylogenetic Tree plots run:
+```bash
+cd python || exit;
+python phylo_tree.py
+``` 
 
 ## Website
 
