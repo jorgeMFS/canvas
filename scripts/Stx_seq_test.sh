@@ -134,14 +134,15 @@ function PAQ_COMPRESS(){
 }
 
 
+echo -e "\033[1;32mCreating synthetic sequence...\033[0m"
 
 synthetic_sequence
 seq_analyse="AB.seq"
 wc -m $seq_analyse
 cp ../paq8l/paq8l .
 chmod +x ./paq8l
+echo -e "\033[1;32mCompressing synthetic sequence...\033[0m"
 PAQ_COMPRESS $seq_analyse PAQ_COMPRESS
-
 GECO3_COMPRESS 0 $seq_analyse NC_GECO3_OPTIMAL
 GECO3_IR_COMPRESS_NEW 0 $seq_analyse IR_0_GECO3_OPTIMAL
 GECO3_IR_COMPRESS_NEW 1 $seq_analyse IR_1_GECO3_OPTIMAL
@@ -149,6 +150,6 @@ GECO3_IR_COMPRESS_NEW 2 $seq_analyse IR_2_GECO3_OPTIMAL
 NBDM2_SNT $seq_analyse IR_NBMD_OPTIMAL
 
 rm -f AB.seq A.seq B.seq  > /dev/null
-
+echo -e "\033[1;32mCreating plot of synthetic sequence...\033[0m"
 cd ../python || exit;
 python3.6 stx_analysis.py

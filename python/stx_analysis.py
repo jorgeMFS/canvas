@@ -4,12 +4,25 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 def plot_stx_mt(nc_mr):
     nc_mr = pd.DataFrame.from_records(nc_mr)
     nc_mr.columns =["Mutation Rate (%)", "NC IR 0", "NC IR 2", "NC DIFF", "NBDM", "NC (PAQ)"]
     ax = sns.lineplot(data=pd.melt(nc_mr, ['Mutation Rate (%)'],var_name='Legend', value_name='NC'), x="Mutation Rate (%)", y='NC',hue='Legend')
     ax.set(xlim=(0, 10), ylim=(0, 1.1))
     plt.savefig("../plots/snx_nc_mt.pdf")
+    print(f"{bcolors.OKGREEN}Synthetic genomic sequence analysis plot saved /plots folder as snx_nc_mt.pdf{bcolors.ENDC}")
+
 
 def process_variation(nc_list):
     mutation_rate = [round(float(x[0])*100) for x in nc_list]
