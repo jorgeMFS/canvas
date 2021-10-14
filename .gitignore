@@ -1,7 +1,10 @@
 #Files
 !VirusDB/ViralSeq_Org.info
 !VirusDB/ViralSeq_Genome.info
+!VirusDB/RefSeq-release204.catalog.gz
+!VirusDB/seq_ref.zip
 VirusDB/SeqSplit
 VirusDB/seqs_header
 VirusDB/seqs_no_header
+VirusDB/RefSeq-release204.catalog
 .vscode/
