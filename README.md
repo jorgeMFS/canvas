@@ -37,28 +37,28 @@ To run the pipeline and obtain all the Reports in the folder reports, use the fo
 To create the features for analysis and classification (very time consuming) run: 
 ```bash
 cd scripst || exit;
-bash Process_features.sh
+bash Process_features.sh;
 ``` 
 
 ### Benchmarck Compression Reports
 To recreate the compression reports used for benchmark (very time consuming) run: 
 ```bash
 cd scripst || exit;
-bash Compress.sh
+bash Compress.sh;
 ``` 
 
 ### Compression Benchmark Analysis
 To obtain the Compression Benchmark plots run:
 ```bash
 cd python || exit;
-python select_best_nc.py
+python select_best_nc_model.py;
 ``` 
 
 ### Sythetic Sequence Analysis
 To perform the sythetic sequence test run:
 ```bash
 cd scripts || exit;
-bash Stx_seq_test.sh
+bash Stx_seq_test.sh;
 ``` 
 
 ### Classification
@@ -66,8 +66,8 @@ To perform classification run the following code:
 
 ```bash
 cd python || exit;
-python prepare_classification.py #recreate classification dataset
-python classifier.py #perform classifications
+python prepare_classification.py; #recreate classification dataset
+python classifier.py; #perform classifications
 ``` 
 
 ### IR Analysis
@@ -82,21 +82,21 @@ Execute this code:
 
 ```bash
 cd python || exit;
-python ir_analysis.py # Performs complete IR analysis
+python ir_analysis.py; # Performs complete IR analysis
 ``` 
 
 ### Human Herpesvirus Analysis
 To obtain the Human Herpesvirus plot run:
 ```bash
 cd scripts || exit;
-bash Herpersvirales.sh
+bash Herpersvirales.sh;
 ``` 
 
 ### Phylogenetic Trees
 To obtain the Phylogenetic Tree plots run:
 ```bash
 cd python || exit;
-python phylo_tree.py
+python phylo_tree.py;
 ``` 
 
 ## Website
@@ -111,6 +111,11 @@ Processing...
 ```bib
 
 ```
+## Requirements
+- Ubunto 18.0 or higher
+- Docker and docker-compose
+- Anaconda
+- Python3.6
 
 ## ISSUES
 Please let us know if there is any
