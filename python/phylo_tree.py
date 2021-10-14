@@ -536,9 +536,6 @@ if __name__ == "__main__":
     IR_1="../reports/Report_NC_IR_OPTIMAL_1"
     IR_2="../reports/Report_NC_IR_OPTIMAL_2"
     
-
-    
-
     ##Process meta information
     print(f"{bcolors.OKGREEN}Processing genomic meta information...{bcolors.ENDC}")
     rg_list = read_genomic_type_path(genomic_type_path)

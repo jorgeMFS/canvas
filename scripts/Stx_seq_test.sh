@@ -153,3 +153,4 @@ rm -f AB.seq A.seq B.seq  > /dev/null
 echo -e "\033[1;32mCreating plot of synthetic sequence...\033[0m"
 cd ../python || exit;
 python3.6 stx_analysis.py
+echo -e "\033[1;32mProcess successfully completed!\033[0m"
