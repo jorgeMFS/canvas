@@ -5,12 +5,7 @@ import os
 import statistics
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from ete3 import Tree
-try:
-    from ete3 import TreeStyle, TextFace, NodeStyle, faces, RectFace, CircleFace, ImgFace, add_face_to_node
-except ImportError as e:
-    print(e)
-
+from ete3 import Tree, TreeStyle, TextFace, NodeStyle, faces, RectFace, CircleFace, ImgFace, add_face_to_node
     
 class bcolors:
     HEADER = '\033[95m'

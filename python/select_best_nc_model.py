@@ -7,6 +7,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 def show_values_on_bars(axs, total, input_str=""):
     def _show_on_single_plot(ax):        
         for p in ax.patches:
@@ -127,15 +138,16 @@ def sum_total_compression(nc_list, save_path):
     plt.savefig(save_path, dpi=900)
 
 if __name__ == "__main__":
+    print(f"{bcolors.OKGREEN}Performing GeCo3 Level Benchmark for Viral Genome Analysis...{bcolors.ENDC}")
     nc_result_path="../reports/REPORT_COMPLEXITY_NC_"
-    print("Processing results...")
+    print(f"{bcolors.BOLD}Processing results...{bcolors.ENDC}")
     nc_list = process_nc(nc_result_path)
-    print("Creating frequency plot...")
+    print(f"{bcolors.BOLD}Creating frequency plot...{bcolors.ENDC}")
     frequency_histogram(nc_list, '../plots/frequency_of_model_selection.pdf')
-    print("Creating sum plot...")
+    print(f"{bcolors.BOLD}Creating sum plot...{bcolors.ENDC}")
     sum_total_compression(nc_list,'../plots/sum_total_nc_models.pdf')
-    print("Finished.")
-    print("To view results, go to the plots folder and see the generated frequency_of_model_selection.pdf and sum_total_nc_models.pdf.")
+    print(f"{bcolors.OKBLUE}To view results, go to the ./plots folder and see:{bcolors.ENDC}", "frequency_of_model_selection.pdf and sum_total_nc_models.pdf.")
+    print(f"{bcolors.OKGREEN}Finished!{bcolors.ENDC}")
     sys.exit()
 
 

@@ -16,14 +16,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import os
 from collections import Counter
-from ete3 import Tree
-try:
-    from ete3 import TreeStyle, TextFace, NodeStyle, faces, RectFace, CircleFace, ImgFace, add_face_to_node
-except ImportError as e:
-    print(e)
 from group_by_family import eprint, join_nc_taxa, read_file,match_files, read_genomic_type_path,read_organism_path, merge_measures,merge_measures2, final_merge,assert_merge, save_to_file
-from nc_plots import remove_no_result, average_by_taxid, average_by_taxid2, average_by_index, plot_measure_vs_len
-
 
 class bcolors:
     HEADER = '\033[95m'
