@@ -11,7 +11,7 @@ Check_Installation() {
 }
 
 
-echo "\033[1mStart Installation...\033[0m"
+echo -e "\033[1mStart Installation...\033[0m"
 #TODO
 conda install -c cobilab gto --yes 
 conda install -y -c bioconda geco3

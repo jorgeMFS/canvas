@@ -595,4 +595,4 @@ if __name__ == "__main__":
     various_trees(organism_names, diff_nc_avg_list, "Viruses", "diff_nc_tree",False,"DIFF","../plots/phylo_trees")
     ##Website Group-specific Phylogenetic Trees
     various_trees_2(organism_names, nc_avg_list,"../plots/trees_2")
-    print(f"{bcolors.OKGREEN}IR Analysis Successfully Complete...{bcolors.ENDC}")
+    print(f"{bcolors.OKGREEN}IR Analysis Successfully Complete!{bcolors.ENDC}")

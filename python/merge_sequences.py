@@ -6,6 +6,18 @@ import re
 import sys
 import os
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 class sequence():
     def __init__(self, line):
         self.filename = int(str(line[0]).split(".")[0].replace('out',''))
@@ -199,6 +211,9 @@ def rest_to_list(rest):
     return rest_file
 
 if __name__ == "__main__":
+    print(f"{bcolors.OKGREEN}Merging segments/fragments/parts of same virus into a single file...{bcolors.ENDC}")
+    print(f"{bcolors.BOLD}Process performed using Viral Sequence information{bcolors.ENDC}")
+
     with open( "../VirusDB/Viral_Seq.info", 'r') as file:
         data = file.read()
     data = data.splitlines()
@@ -424,5 +439,8 @@ if __name__ == "__main__":
     
     non_concat_files = rest_to_list(non_concat)
     total_files = files_merge + incomplete_seq_files + non_concat_files 
+    
     conc_files("../VirusDB/Virus_by_taxid", total_files)
-        
+
+    print(f"{bcolors.OKBLUE}Processed genomic DB sucessfully stored in the path:{bcolors.ENDC}","VirusDB/Virus_by_taxid")
+    print(f"{bcolors.OKGREEN}Merging Successfully Complete!{bcolors.ENDC}")
