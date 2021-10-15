@@ -6,6 +6,7 @@
  Complexity ANalysis VirAl Sequences 
 </h2>
 
+[![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
 ## Download Project
 Get CANVAS project using:

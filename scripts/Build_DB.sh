@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 
-DIVIDE=0;
+DIVIDE=1;
 MAKE_TABLE=1;
-CREATE_DB=0;
+CREATE_DB=1;
 cd ../VirusDB || exit
 ## Sequence Split
 mkdir -p seqs_no_header/;
@@ -11,8 +11,8 @@ mkdir -p seqs_header/;
 mkdir -p SeqSplit/;
 
 #Unzip Viral Sequence file
-# rm -f seq_ref.fasta
-# unzip seq_ref.zip
+rm -f seq_ref.fasta
+unzip seq_ref.zip
 
 if [ "$DIVIDE" -eq "1" ];
     then
@@ -52,7 +52,6 @@ if [ "$DIVIDE" -eq "1" ];
 fi
 
 ### Get id 
-
 if [ "$MAKE_TABLE" -eq "1" ];
     then
     rm -f RefSeq-release204.catalog
@@ -80,10 +79,10 @@ if [ "$MAKE_TABLE" -eq "1" ];
             fi
     done
 fi
-exit;
 
 if [ "$CREATE_DB" -eq "1" ];
     then
     python3.6 ../python/merge_sequences.py
 fi
+
 rm Virus_by_taxid/out*
