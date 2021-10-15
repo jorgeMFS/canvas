@@ -33,6 +33,15 @@ docker-compose up -d && docker exec -it canvas bash && docker-compose down
 
 ## Result Replication
 To run the pipeline and obtain all the Reports in the folder reports, use the following commands.
+Note that it is not required to perform database reconstruction and feature recreation to perform any other tasks.  However, if you wish to recreate the features reports, you must perform the database reconstruction task.
+
+## Database reconstruction
+If you wish to reconstruct the Viral database, run the following script:
+
+```bash
+cd scripst || exit;
+bash Build_DB.sh;
+``` 
 
 ### Create Features for Analysis and Classification
 To create the features for analysis and classification (very time consuming) run: 

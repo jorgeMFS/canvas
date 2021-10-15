@@ -28,7 +28,12 @@ ADD . /canvas
 
 WORKDIR /canvas
 
+RUN chmod +x ./*sh
+
+# RUN bash Install_programs.sh
+
 RUN bash Make.sh
+
 
 # RUN useradd jorge
 

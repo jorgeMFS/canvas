@@ -4,6 +4,8 @@
 import os
 import statistics
 import matplotlib.pyplot as plt
+plt.switch_backend('agg')
+
 import matplotlib as mpl
 from ete3 import Tree, TreeStyle, TextFace, NodeStyle, faces, RectFace, CircleFace, ImgFace, add_face_to_node
     

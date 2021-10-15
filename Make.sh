@@ -17,18 +17,10 @@ echo -e "\033[1mStart Installation...\033[0m"
 python3.6 -m pip install --upgrade pip
 python3.6 -m pip install  -r ../requirements.txt
 
-conda install -y -c bioconda geco3
-conda install -c bioconda entrez-direct --yes
 conda install -c https://conda.anaconda.org/biocore scikit-bio
 conda install -c etetoolkit ete3 ete_toolchain
 conda install -c anaconda scipy --yes
 conda install -c conda-forge xgboost
-conda install -c cobilab gto --yes 
-
-
-Check_Installation "gto";
-Check_Installation "GeCo3";
-Check_Installation "efetch";
 
 cd scripts/ || exit;
 chmod +x ./*.sh
