@@ -18,11 +18,11 @@ RUN apt-get install -y unzip
 
 RUN apt-get install -y gcc-multilib
 
-# RUN RUN apt-get install -y build-essential
+RUN apt-get install -y build-essential
 
-# RUN sudo apt-get install -y qtcreator
+# RUN apt-get install -y qtcreator
 
-# RUN apt-get install -y qt5-default
+# RUN apt-get install -y qt5-default X: É esta
 
 ADD . /cv 
 # change cv to canvas later
@@ -30,5 +30,9 @@ ADD . /cv
 WORKDIR /cv
 
 RUN bash Make.sh
+
+RUN useradd jorge
+
+USER jorge
 
 CMD tail -f >> /dev/null
