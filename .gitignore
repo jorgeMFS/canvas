@@ -7,8 +7,6 @@ VirusDB/SeqSplit
 VirusDB/seqs_header
 VirusDB/seqs_no_header
 VirusDB/RefSeq-release204.catalog
-plots/
 VirusDB/seq_ref.fasta
 VirusDB/Virus_by_taxid
-xlslist/
 .vscode/

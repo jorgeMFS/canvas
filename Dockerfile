@@ -24,15 +24,14 @@ RUN apt-get install -y build-essential
 
 # RUN apt-get install -y qt5-default X: É esta
 
-ADD . /cv 
-# change cv to canvas later
+ADD . /canvas 
 
-WORKDIR /cv
+WORKDIR /canvas
 
 RUN bash Make.sh
 
-RUN useradd jorge
+# RUN useradd jorge
 
-USER jorge
+# USER jorge
 
 CMD tail -f >> /dev/null
