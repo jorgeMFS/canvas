@@ -15,13 +15,6 @@ git clone https://github.com/jorgeMFS/canvas.git
 cd canvas/
 ```
 
-## Install Tools
-Give run permissions to the files:
-``` bash
-chmod +x *.sh
-bash Make.sh
-```
-
 ## Using Docker
 
 ```sh
@@ -29,6 +22,14 @@ git clone https://github.com/jorgeMFS/canvas.git
 cd canvas
 docker-compose build
 docker-compose up -d && docker exec -it canvas bash && docker-compose down
+```
+
+## Install Tools
+Give run permissions to the files and Install Tools:
+``` bash
+chmod +x *.sh
+bash Make.sh;
+bash Install_programs.sh;
 ```
 
 ## Result Replication
@@ -39,21 +40,21 @@ Note that it is not required to perform database reconstruction and feature recr
 If you wish to reconstruct the Viral database, run the following script:
 
 ```bash
-cd scripst || exit;
+cd scripts || exit;
 bash Build_DB.sh;
 ``` 
 
 ### Create Features for Analysis and Classification
 To create the features for analysis and classification (very time consuming) run: 
 ```bash
-cd scripst || exit;
+cd scripts || exit;
 bash Process_features.sh;
 ``` 
 
 ### Benchmarck Compression Reports
 To recreate the compression reports used for benchmark (very time consuming) run: 
 ```bash
-cd scripst || exit;
+cd scripts || exit;
 bash Compress.sh;
 ``` 
 
@@ -64,8 +65,8 @@ cd python || exit;
 python select_best_nc_model.py;
 ``` 
 
-### Sythetic Sequence Analysis
-To perform the sythetic sequence test run:
+### Synthetic Sequence Analysis
+To perform the synthetic sequence test run:
 ```bash
 cd scripts || exit;
 bash Stx_seq_test.sh;
@@ -86,7 +87,7 @@ To perform the complete IR analysis and create:
 - 2d scatter plots;
 - 3d scatter plots;
 - top taxonomic group lists;
-- Occurance of each Genus.
+- Occurrence of each Genus.
 
 Execute this code:
 
