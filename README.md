@@ -103,8 +103,18 @@ cd scripts || exit;
 bash Herpersvirales.sh;
 ``` 
 
-### Phylogenetic Trees
-To obtain the Phylogenetic Tree plots run:
+## Phylogenetic Trees
+The Phylogenetic Trees require GUI application. As such, the reproduction of the trees has to be performed outside of the docker on the Ubuntu system on the /canvas folder:
+
+```bash
+chmod +x *.sh
+bash so_dependencies.sh #install Ubuntu system dependencies required for the script to run and Anaconda
+conda create -n canvas python=3.6
+conda activate canvas
+bash Make.sh #install python libs
+bash Install_programs.sh #install tools using conda
+``` 
+Afterwards, to obtain the Phylogenetic Tree plots run:
 ```bash
 cd python || exit;
 python phylo_tree.py;

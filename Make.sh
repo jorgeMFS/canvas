@@ -15,7 +15,7 @@ echo -e "\033[1mStart Installation...\033[0m"
 
 
 python3.6 -m pip install --upgrade pip
-python3.6 -m pip install  -r ../requirements.txt
+python3.6 -m pip install  -r requirements.txt
 
 conda install -c https://conda.anaconda.org/biocore scikit-bio
 conda install -c etetoolkit ete3 ete_toolchain
