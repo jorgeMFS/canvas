@@ -524,7 +524,7 @@ def create_original_tree(meta_information_list, avg_list, root, name,sci,save_la
 
 if __name__ == "__main__":    
 
-    print(f"{bcolors.OKGREEN}Starting IR Analysis...{bcolors.ENDC}")
+    print(f"{bcolors.OKGREEN}Starting Phylo_tree program...{bcolors.ENDC}")
 
     #Metagenomic Information Paths
     organism_path="../VirusDB/ViralSeq_Org.info"
@@ -602,4 +602,4 @@ if __name__ == "__main__":
     various_trees(organism_names, diff_nc_avg_list, "Viruses", "diff_nc_tree",False,"DIFF","../plots/phylo_trees")
     ##Website Group-specific Phylogenetic Trees
     various_trees_2(organism_names, nc_avg_list,"../plots/trees_2")
-    print(f"{bcolors.OKGREEN}IR Analysis Successfully Complete!{bcolors.ENDC}")
+    print(f"{bcolors.OKGREEN}Phylogenetic Trees Successfully Completed!{bcolors.ENDC}")
