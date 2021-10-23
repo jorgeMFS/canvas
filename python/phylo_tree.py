@@ -3,6 +3,7 @@
 #!/usr/bin/env python
 import os
 import statistics
+import math
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 
@@ -378,6 +379,8 @@ def various_trees_2(organism_names, average_join_var,save_folder):
                 tree_lst=[lst for lst in pre_tree_list if lst[0]==root]
                 avg_list_used = filter_based_on_list(tree_lst,average_join_var)
                 create_original_tree(tree_lst, avg_list_used, root, savefolder, True, "NC")
+    print(f"{bcolors.OKBLUE}Phylogenetic trees successfully stored in:{bcolors.ENDC}",save_folder)
+
 
 
 def various_trees(meta_information_list,avg_list, root, name,sci,save_labels,save_folder):
@@ -393,6 +396,8 @@ def various_trees(meta_information_list,avg_list, root, name,sci,save_labels,sav
         avg_list_used = filter_based_on_list(met,avg_list)
         save_labels=name.split("_")[0]
         create_original_tree(met,avg_list_used, root,sv_name,sci,save_labels)
+    print(f"{bcolors.OKBLUE}Phylogenetic trees successfully stored in:{bcolors.ENDC}",save_folder)
+
 
 def change_tree_branch(node_list, rgb_color, dst):
     val=8-int(dst)
