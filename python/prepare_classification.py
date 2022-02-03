@@ -5,6 +5,7 @@ from collections import Counter
 import numpy as np
 import statistics
 import os
+import sys
 
 class bcolors:
     HEADER = '\033[95m'
@@ -200,9 +201,37 @@ def join_for_class_array(len_seq, gc_seq, nc_file, best_nc_for_file_0, best_nc_f
                 num_x=num_x.replace('out','')
                 classifier.append(clsf.get(x[index]))    
                 virus.append([int(num_x),int(l_sq[2]),float(gc_sq[2]),float(nc[2]), float(ir_0[2]),float(ir_1[2]),float(ir_2[2])])   
-    virus=np.array(virus)
-    classifier=np.array(classifier).astype('int32')
-    return virus, classifier
+    virus1=np.array(virus)
+    classifier1=np.array(classifier).astype('int32')
+    (unique, counts) = np.unique(classifier1, return_counts=True)
+    frequencies = np.asarray((unique, counts)).T
+    to_del=[]
+    for f in frequencies:
+        if f[1]<4:
+            to_del.append(f[0])
+    if to_del:
+        new_classifier=[]
+        new_virus=[]
+        n_c=[]
+        
+        for v,c in zip(virus,classifier):
+            if c not in to_del:
+                new_classifier.append(c)
+                new_virus.append(v)
+
+        new_num = [[x,y] for x,y in zip(range(len(set(new_classifier))),list(set(new_classifier)))]
+        for x in new_classifier:
+            for el in new_num:
+                if x==el[1]:
+                    n_c.append(el[0])
+        virus1=np.array(new_virus)
+        classifier1=np.array(n_c).astype('int32')
+
+    return virus1, classifier1
+        
+
+
+    
 
 
 

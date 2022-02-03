@@ -68,8 +68,8 @@ def xgboost_classification(data, labels, taxa, variables, iterations):
         print("Number of samples: ", np.shape(data)[0])
         print("Number of Labels: ", np.shape(np.unique(labels))[0])
         for a in range(iterations):
-            X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.4)
-            
+            # X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.4)
+            X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.20, stratify=labels, random_state=a)
             
             model = XGBClassifier(max_depth=6,learning_rate=0.1, n_estimators=250,eval_metric='mlogloss')
             model.fit(X_train, y_train)
@@ -90,8 +90,8 @@ def xgboost_classification(data, labels, taxa, variables, iterations):
         p_ac=p_ac_list[index_max]
         hit_probability=determine_hit_probability(p_ac,labels)
 
-        ac_list = [taxa, np.shape(np.unique(labels))[0],np.shape(data)[0], max(AC)* 100.0 ]
-        f1_s = [taxa, np.shape(np.unique(labels))[0],np.shape(data)[0], max(F1) ]
+        ac_list = [taxa, np.shape(np.unique(labels))[0],np.shape(data)[0], avg_ac* 100.0 ]
+        f1_s = [taxa, np.shape(np.unique(labels))[0],np.shape(data)[0], avg_f1 ]
         return  ac_list, f1_s, hit_probability
 
 def other_classifications(data, labels, taxa, variables, iterations):
@@ -109,7 +109,8 @@ def other_classifications(data, labels, taxa, variables, iterations):
         print("Number of samples: ", np.shape(data)[0])
         print("Number of Labels: ", np.shape(np.unique(labels))[0])
         for a in range(iterations):
-            X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.4)
+            # X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.4)
+            X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.20, stratify=labels, random_state=a)
             
             LDA_model = LinearDiscriminantAnalysis()
             GaussianNB_model = GaussianNB()
@@ -187,7 +188,7 @@ def hit_percentage(p_occurance, class_accuracy):
 
 def classification(relative_path):
     taxonomy=["Genome","Realm","Kingdom","Phylum","Class","Order","Family","Genus"]
-    iterations=5
+    iterations=50
     acc_xgboost=[["Classification","N. Classes","Samples","NC","NC+SL+GC","All Features"]]
     f1_xgboost=[["Classification","N. Classes","Samples","NC","NC+SL+GC","All Features"]]
     acc_other=[["Classification","N. Classes","Samples","LDA","GNB","SVM","KNN","XGB"]]
