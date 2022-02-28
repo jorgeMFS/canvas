@@ -8,6 +8,19 @@
 
 [![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
+## Install GIT LFS (GIT LARGE FILE STORAGE)
+
+If git LFS, please intall it using the following steps:
+
+```bash
+mkdir -p gitLFS
+cd gitLFS/
+wget https://github.com/git-lfs/git-lfs/releases/download/v2.9.0/git-lfs-linux-amd64-v2.9.0.tar.gz
+tar -xf git-lfs-linux-amd64-v2.9.0.tar.gz
+chmod 755 install.sh
+sudo ./install.sh
+```
+
 ## Download Project
 Get CANVAS project using:
 ```bash
@@ -100,7 +113,7 @@ python ir_analysis.py; # Performs complete IR analysis
 To obtain the Human Herpesvirus plot run:
 ```bash
 cd scripts || exit;
-bash Herpersvirales.sh;
+bash Herpesvirales.sh;
 ``` 
 
 ## Phylogenetic Trees
