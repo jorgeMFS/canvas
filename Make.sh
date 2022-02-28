@@ -23,9 +23,12 @@ conda install -c etetoolkit ete3 ete_toolchain --yes
 conda install -c anaconda scipy=1.7.3 --yes
 conda install -c conda-forge xgboost=1.5.1 --yes
 
+conda install -c bioconda geco3 --yes
+conda install -c bioconda entrez-direct --yes
+conda install -c cobilab gto --yes 
+
 cd scripts/ || exit;
 chmod +x ./*.sh
 
 echo -e "\033[1;32mSuccessfully installed tools!\033[0m";
 
-bash Install_programs.sh 
