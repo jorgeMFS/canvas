@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ENV PATH="/root/miniconda3/bin:${PATH}"
 ARG PATH="/root/miniconda3/bin:${PATH}"
 
-RUN apt update && apt install -y python3-pip wget
+RUN apt update && apt install -y wget
 
 RUN wget \
     https://repo.anaconda.com/miniconda/Miniconda3-4.3.11-Linux-x86_64.sh \
@@ -25,9 +25,6 @@ WORKDIR /canvas
 
 RUN chmod +x ./*sh
 
-# RUN bash Install_programs.sh #works outside not inside :L
-
 RUN bash Make.sh
-
 
 CMD tail -f >> /dev/null

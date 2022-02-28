@@ -9,3 +9,5 @@ seaborn==0.10.1
 networkx==2.5.1
 openpyxl==3.0.9
 matplotlib==3.2.2
+pyparsing==2.4.7
+xgboost==1.5.1

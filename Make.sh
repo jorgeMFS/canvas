@@ -18,11 +18,14 @@ python3.6 -m pip install --upgrade pip
 python3.6 -m pip install  -r requirements.txt
 
 conda install -c https://conda.anaconda.org/biocore scikit-bio --yes
+conda install -c https://conda.anaconda.org/biocore scikit-bio --yes
 conda install -c etetoolkit ete3 ete_toolchain --yes
-conda install -c anaconda scipy --yes
-conda install -c conda-forge xgboost --yes
+conda install -c anaconda scipy=1.7.3 --yes
+conda install -c conda-forge xgboost=1.5.1 --yes
 
 cd scripts/ || exit;
 chmod +x ./*.sh
 
 echo -e "\033[1;32mSuccessfully installed tools!\033[0m";
+
+bash Install_programs.sh 

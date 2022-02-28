@@ -88,7 +88,7 @@ for file in ../VirusDB/HHV/*.fa
             exit;
         fi 
 done
-rm FILE FASTA HEADER A LLL.seq > /dev/null
+rm -f FILE FASTA HEADER A LLL.seq > /dev/null
 
 GECO_COMPRESS REPORT_HHV
 cd ../python || exit;
