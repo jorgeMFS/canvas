@@ -42,34 +42,13 @@ Give run permissions to the files and Install Tools:
 ``` bash
 chmod +x *.sh
 bash Make.sh;
-bash Install_programs.sh;
 ```
 
 ## Result Replication
 To run the pipeline and obtain all the Reports in the folder reports, use the following commands.
 Note that it is not required to perform database reconstruction and feature recreation to perform any other tasks.  However, if you wish to recreate the features reports, you must perform the database reconstruction task.
 
-## Database reconstruction
-If you wish to reconstruct the Viral database, run the following script:
 
-```bash
-cd scripts || exit;
-bash Build_DB.sh;
-``` 
-
-### Create Features for Analysis and Classification
-To create the features for analysis and classification (very time consuming) run: 
-```bash
-cd scripts || exit;
-bash Process_features.sh;
-``` 
-
-### Benchmarck Compression Reports
-To recreate the compression reports used for benchmark (very time consuming) run: 
-```bash
-cd scripts || exit;
-bash Compress.sh;
-``` 
 
 ### Compression Benchmark Analysis
 To obtain the Compression Benchmark plots run:
@@ -114,6 +93,28 @@ To obtain the Human Herpesvirus plot run:
 ```bash
 cd scripts || exit;
 bash Herpesvirales.sh;
+``` 
+
+## Database reconstruction
+If you wish to reconstruct the Viral database, run the following script:
+
+```bash
+cd scripts || exit;
+bash Build_DB.sh;
+``` 
+
+### Create Features for Analysis and Classification
+To create the features for analysis and classification (very time consuming) run: 
+```bash
+cd scripts || exit;
+bash Process_features.sh;
+``` 
+
+### Benchmarck Compression Reports
+To recreate the compression reports used for benchmark (very time consuming) run: 
+```bash
+cd scripts || exit;
+bash Compress.sh;
 ``` 
 
 ## Phylogenetic Trees
