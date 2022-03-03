@@ -29,7 +29,10 @@ cd canvas/
 ```
 
 ## Using Docker
+To perform installation correctly, docker and docker compose must be installed in the system (see https://docs.docker.com/engine/install/ubuntu/). 
 
+
+Then follow these instructions:
 ```sh
 git clone https://github.com/jorgeMFS/canvas.git
 cd canvas
@@ -104,14 +107,14 @@ bash Build_DB.sh;
 ``` 
 
 ### Create Features for Analysis and Classification
-To create the features for analysis and classification (very time consuming) run: 
+To create the features for analysis and classification (very time consuming, may take several days) run: 
 ```bash
 cd scripts || exit;
 bash Process_features.sh;
 ``` 
 
 ### Benchmarck Compression Reports
-To recreate the compression reports used for benchmark (very time consuming) run: 
+To recreate the compression reports used for benchmark (very time consuming, may take several days) run: 
 ```bash
 cd scripts || exit;
 bash Compress.sh;
