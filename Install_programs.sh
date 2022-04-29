@@ -10,9 +10,19 @@ Check_Installation() {
     fi
 }
 
+Cmix_Installation() {
+    mkdir -p tmp
+    wget https://github.com/byronknoll/cmix/archive/refs/tags/v19.1.zip -P tmp
+    unzip tmp/v19.1.zip 
+    cd cmix-19.1/ 
+    chmod +x cmix
+    make
+    cd ..
+    rm -rf tmp
+}
 
 echo -e "\033[1mStart Tool Installation...\033[0m"
-#TODO
+
 
 conda install -c bioconda geco3 --yes
 Check_Installation "GeCo3";
@@ -20,6 +30,6 @@ conda install -c bioconda entrez-direct --yes
 Check_Installation "efetch";
 conda install -c cobilab gto --yes 
 Check_Installation "gto";
-
+Cmix_Installation
 
 echo -e "\033[1;32mSuccessfully installed tools!\033[0m";

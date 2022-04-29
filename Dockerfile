@@ -19,6 +19,8 @@ RUN apt-get install -y gcc-multilib
 
 RUN apt-get install -y build-essential
 
+RUN apt-get install -y clang
+
 ADD . /canvas 
 
 WORKDIR /canvas
