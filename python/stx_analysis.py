@@ -17,7 +17,7 @@ class bcolors:
 
 def plot_stx_mt(nc_mr):
     nc_mr = pd.DataFrame.from_records(nc_mr)
-    nc_mr.columns =["Mutation Rate (%)", "NC IR 0", "NC IR 2", "NC DIFF", "NBDM", "NC (PAQ)"]
+    nc_mr.columns =["Mutation Rate (%)", "NC IR 0", "NC IR 2", "NC DIFF", "NBDM", "NC (PAQ)", "NC (CMIX)"]
     ax = sns.lineplot(data=pd.melt(nc_mr, ['Mutation Rate (%)'],var_name='Legend', value_name='NC'), x="Mutation Rate (%)", y='NC',hue='Legend')
     ax.set(xlim=(0, 10), ylim=(0, 1.1))
     plt.savefig("../plots/snx_nc_mt.pdf")
@@ -61,12 +61,14 @@ if __name__ == "__main__":
     IR_2_STX="../reports/IR_2_GECO3_OPTIMAL"
     IR_NBDM_STX="../reports/IR_NBMD_OPTIMAL"
     PAQ_STX = "../reports/PAQ_COMPRESS"
-
+    CMIX_STX = "../reports/CMIX_COMPRESS"
+    
     best_nc_for_file_normal_stx = nc_process_no_floor(NORMAL_STX)
     best_nc_for_file_0_stx = nc_process_no_floor(IR_0_STX)
     best_nc_for_file_1_stx = nc_process_no_floor(IR_1_STX)
     best_nc_for_file_2_stx = nc_process_no_floor(IR_2_STX)
     paq_stx = nc_process_no_floor(PAQ_STX)
+    cmix_stx = nc_process_no_floor(CMIX_STX)
     nbdm2_stx = nc_process_no_floor(IR_NBDM_STX)
 
 
@@ -76,11 +78,13 @@ if __name__ == "__main__":
     _,nc_ir_2 = process_variation(best_nc_for_file_2_stx)
     _,nbdm_ir = process_variation(nbdm2_stx)
     _,paq = process_variation(paq_stx)
-    
+    _,cmix = process_variation(cmix_stx)
+
+
     diff_nc_stx = nc_diff(best_nc_for_file_0_stx, best_nc_for_file_2_stx)
     diff_nc_stx2 = [df[2] for df in diff_nc_stx]
 
-    nc_mr = [[a,b,c,d,e,f] for a,b,c,d,e,f in zip(mr, nc_ir_0, nc_ir_1, diff_nc_stx2, nbdm_ir, paq)]
+    nc_mr = [[a,b,c,d,e,f,g] for a,b,c,d,e,f,g in zip(mr, nc_ir_0, nc_ir_1, diff_nc_stx2, nbdm_ir, paq, cmix)]
     plot_stx_mt(nc_mr)
     
     print("Synthetic Data : ", best_nc_for_file_0_stx[0][1],", IR O NC : ", best_nc_for_file_0_stx[0][2] )

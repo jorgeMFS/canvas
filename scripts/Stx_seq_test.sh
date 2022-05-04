@@ -129,7 +129,6 @@ function CMIX_COMPRESS(){
         entropy=$(echo "scale=10; ($compressed * 8.0) / ($original*2.0)" | bc -l | awk '{printf "%f", $0}');
         echo -e "$mutation_rate\t$name\t$entropy" >> ../reports/"$2"
     done
-    rm ./paq8l
     rm  LLL.seq* output.seq
     
 }
@@ -166,8 +165,8 @@ wc -m $seq_analyse
 cp ../paq8l/paq8l .
 chmod +x ./paq8l
 echo -e "\033[1;32mCompressing synthetic sequence...\033[0m"
-CMIX_COMPRESS $seq_analyse CMIX_COMPRESS
 PAQ_COMPRESS $seq_analyse PAQ_COMPRESS
+CMIX_COMPRESS $seq_analyse CMIX_COMPRESS
 GECO3_COMPRESS 0 $seq_analyse NC_GECO3_OPTIMAL
 GECO3_IR_COMPRESS_NEW 0 $seq_analyse IR_0_GECO3_OPTIMAL
 GECO3_IR_COMPRESS_NEW 1 $seq_analyse IR_1_GECO3_OPTIMAL
