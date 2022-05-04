@@ -2,7 +2,7 @@
 #
 
 
-
+CMIXPATH="../cmix-19.1/";
 
 create_seq_reverse_comp(){
 
@@ -37,6 +37,7 @@ function GECO2_IR_COMPRESS_NEW(){
         # echo $mutation_rate
         mutate_sequence "$mutation_rate" "$file" LLL.seq
         GeCo2 -v "$Level_1" LLL.seq 1> report_stdout_"$1" 2> report_stderr_"$1"
+        
         BPS1=$(grep "Total bytes" report_stdout_"$1" | awk '{ print $6; }');
         entropy1=$(echo "scale=10; ($BPS1) / 2" | bc -l | awk '{printf "%f", $0}')
         echo -e "$mutation_rate\t$name\t$entropy1" >> ../reports/"$3"
@@ -110,6 +111,29 @@ function NBDM2_SNT(){
     done
 }
 
+function CMIX_COMPRESS(){
+    rm -f ../reports/"$2";
+    file=$1;
+
+    echo "Running $file ...";
+    f="$(basename -- "$file")"
+    name=$f
+
+    for i in {0..100}
+    do
+        mutation_rate=$(echo "scale=10; ($i) / 100" | bc -l | awk '{printf "%f", $0}')
+        mutate_sequence "$mutation_rate" "$file" LLL.seq  
+        ${CMIXPATH}cmix -c LLL.seq output.seq
+        original=$(ls -la LLL.seq | awk '{ print $5;}');
+        compressed=$(ls -la output.seq | awk '{ print $5;}');
+        entropy=$(echo "scale=10; ($compressed * 8.0) / ($original*2.0)" | bc -l | awk '{printf "%f", $0}');
+        echo -e "$mutation_rate\t$name\t$entropy" >> ../reports/"$2"
+    done
+    rm ./paq8l
+    rm  LLL.seq* output.seq
+    
+}
+
 function PAQ_COMPRESS(){
 
     rm -f ../reports/"$2";
@@ -142,6 +166,7 @@ wc -m $seq_analyse
 cp ../paq8l/paq8l .
 chmod +x ./paq8l
 echo -e "\033[1;32mCompressing synthetic sequence...\033[0m"
+CMIX_COMPRESS $seq_analyse CMIX_COMPRESS
 PAQ_COMPRESS $seq_analyse PAQ_COMPRESS
 GECO3_COMPRESS 0 $seq_analyse NC_GECO3_OPTIMAL
 GECO3_IR_COMPRESS_NEW 0 $seq_analyse IR_0_GECO3_OPTIMAL
