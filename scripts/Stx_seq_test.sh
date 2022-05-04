@@ -31,7 +31,7 @@ function GECO2_IR_COMPRESS_NEW(){
     echo "Running $file ...";
     f="$(basename -- "$file")"
     name=$f
-    for i in {0..100}
+    for i in {0..10}
     do
         mutation_rate=$(echo "scale=10; ($i) / 100" | bc -l | awk '{printf "%f", $0}')
         # echo $mutation_rate
@@ -56,7 +56,7 @@ function GECO3_IR_COMPRESS_NEW(){
     f="$(basename -- "$file")"
     name=$f
 
-    for i in {0..100}
+    for i in {0..10}
     do
         mutation_rate=$(echo "scale=10; ($i) / 100" | bc -l | awk '{printf "%f", $0}')
         mutate_sequence "$mutation_rate" "$file" LLL.seq
@@ -81,7 +81,7 @@ function GECO3_COMPRESS(){
     f="$(basename -- "$file")"
     name=$f
 
-    for i in {0..100}
+    for i in {0..10}
     do
         mutation_rate=$(echo "scale=10; ($i) / 100" | bc -l | awk '{printf "%f", $0}')
         mutate_sequence "$mutation_rate" "$file" LLL.seq
@@ -102,7 +102,7 @@ function NBDM2_SNT(){
     f="$(basename -- "$file")"
     name=$f
 
-    for i in {0..100}
+    for i in {0..10}
     do
         mutation_rate=$(echo "scale=10; ($i) / 100" | bc -l | awk '{printf "%f", $0}')
         mutate_sequence "$mutation_rate" "$file" LLL.seq
@@ -119,7 +119,7 @@ function CMIX_COMPRESS(){
     f="$(basename -- "$file")"
     name=$f
 
-    for i in {0..100}
+    for i in {0..10}
     do
         mutation_rate=$(echo "scale=10; ($i) / 100" | bc -l | awk '{printf "%f", $0}')
         mutate_sequence "$mutation_rate" "$file" LLL.seq  
@@ -143,7 +143,7 @@ function PAQ_COMPRESS(){
     f="$(basename -- "$file")"
     name=$f
 
-    for i in {0..100}
+    for i in {0..10}
     do
         mutation_rate=$(echo "scale=10; ($i) / 100" | bc -l | awk '{printf "%f", $0}')
         mutate_sequence "$mutation_rate" "$file" LLL.seq  
