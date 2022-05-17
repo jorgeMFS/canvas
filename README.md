@@ -51,7 +51,12 @@ bash Make.sh;
 To run the pipeline and obtain all the Reports in the folder reports, use the following commands.
 Note that it is not required to perform database reconstruction and feature recreation to perform any other tasks.  However, if you wish to recreate the features reports, you must perform the database reconstruction task.
 
-
+### Cmix vs GeCo3 time-compression Analysis
+To obtain the Human Herpesvirus plot run:
+```bash
+cd scripts || exit;
+python compare_cmix_hhv.py 
+``` 
 
 ### Compression Benchmark Analysis
 To obtain the Compression Benchmark plots run:
@@ -96,6 +101,12 @@ To obtain the Human Herpesvirus plot run:
 ```bash
 cd scripts || exit;
 bash Herpesvirales.sh;
+``` 
+### Cmix vs GeCo3 time-compression Analysis
+To obtain the Human Herpesvirus plot run:
+```bash
+cd scripts || exit;
+python compare_cmix_hhv.py 
 ``` 
 
 ## Database reconstruction
