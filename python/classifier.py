@@ -189,8 +189,8 @@ def hit_percentage(p_occurance, class_accuracy):
 def classification(relative_path):
     taxonomy=["Genome","Realm","Kingdom","Phylum","Class","Order","Family","Genus"]
     iterations=50
-    acc_xgboost=[["Classification","N. Classes","Samples","NC","NC+SL+GC","All Features"]]
-    f1_xgboost=[["Classification","N. Classes","Samples","NC","NC+SL+GC","All Features"]]
+    acc_xgboost=[["Classification","N. Classes","Samples","NC","NC+GC","NC+SL+GC","All without SQ","All Features"]]
+    f1_xgboost=[["Classification","N. Classes","Samples","NC","NC+GC","NC+SL+GC","All without SQ","All Features"]]
     acc_other=[["Classification","N. Classes","Samples","LDA","GNB","SVM","KNN","XGB"]]
     f1_other=[["Classification","N. Classes","Samples","LDA","GNB","SVM","KNN","XGB"]]
     p_hit=[]
@@ -203,18 +203,25 @@ def classification(relative_path):
         numbering=np.arange(np.shape(data)[0]).astype('int32')
         data = np.hstack((numbering[:,None], data))
         sq_gc_nc_data=data[:,0:4]
+        gc_nc_data=data[:,[0,2,3]]
         nc_data=data[:,[0,3]]
+        data_except_sq=data[:,[0,2,3,4,5,6]]
         sq_gc_nc_data=data[:,0:4]
         random_hit_per=determine_random_hit_percentage(labels)
     
         ac_1f, f1_1f, _ = xgboost_classification(nc_data, labels, tx, "NC", iterations)
+        ac_2f, f1_2f, _ = xgboost_classification(gc_nc_data, labels, tx, "NC + GC(%)", iterations)
+        
         ac_3f, f1_3f, _ = xgboost_classification(sq_gc_nc_data, labels, tx, "NC + SQ + GC(%)", iterations)
+
+        ac_all_except, f1_all_except,_ = xgboost_classification(data_except_sq, labels, tx, "All not SQ", iterations)
+
         ac_all, f1_all, class_hit_per = xgboost_classification(data, labels, tx, "All Features", iterations)
         p_hit.append([tx,random_hit_per,class_hit_per])
         ac_other, f1_l_other = other_classifications(data, labels, tx, "All Features", iterations)
         
-        acc_xgboost.append(ac_1f + [ac_3f[-1]] + [ac_all[-1]])
-        f1_xgboost.append(f1_1f + [f1_3f[-1]] + [f1_all[-1]])
+        acc_xgboost.append(ac_1f + [ac_2f[-1]] + [ac_3f[-1]] + [ac_all_except[-1]] + [ac_all[-1]])
+        f1_xgboost.append(f1_1f + [f1_2f[-1]]  + [f1_3f[-1]] + [f1_all_except[-1]] + [f1_all[-1]])
         acc_other.append(ac_other + [ac_all[-1]])
         f1_other.append(f1_l_other + [f1_all[-1]])
 
