@@ -131,8 +131,8 @@ cd scripts || exit;
 bash Compress.sh;
 ``` 
 
-## Phylogenetic Trees
-The Phylogenetic Trees require GUI application. As such, the reproduction of the trees has to be performed outside of the docker on the Ubuntu system on the /canvas folder:
+## Cladograms
+The cladograms require GUI application. As such, the reproduction of the trees has to be performed outside of the docker on the Ubuntu system on the /canvas folder:
 
 ```bash
 chmod +x *.sh
@@ -142,7 +142,7 @@ conda activate canvas
 bash Make.sh #install python libs
 bash Install_programs.sh #install tools using conda
 ``` 
-Afterwards, to obtain the Phylogenetic Tree plots run:
+Afterwards, to obtain the cladogram plots run:
 ```bash
 cd python || exit;
 python phylo_tree.py;
