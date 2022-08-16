@@ -155,11 +155,24 @@ Check out the website of this project: https://asilab.github.io/canvas/
 ## CITE
 Please cite the followings, if you use CANVAS:
 
-Processing...
+Jorge Miguel Silva, Diogo Pratas, Tânia Caetano, Sérgio Matos, The complexity landscape of viral genomes, GigaScience, Volume 11, 2022, giac079, https://doi.org/10.1093/gigascience/giac079
 
 ```bib
-
+@article{10.1093/gigascience/giac079,
+    author = {Silva, Jorge Miguel and Pratas, Diogo and Caetano, Tânia and Matos, Sérgio},
+    title = "{The complexity landscape of viral genomes}",
+    journal = {GigaScience},
+    volume = {11},
+    year = {2022},
+    month = {08},
+    issn = {2047-217X},
+    doi = {10.1093/gigascience/giac079},
+    url = {https://doi.org/10.1093/gigascience/giac079},
+    note = {giac079},
+    eprint = {https://academic.oup.com/gigascience/article-pdf/doi/10.1093/gigascience/giac079/45332144/giac079.pdf},
+}
 ```
+
 ## Requirements
 - Ubunto 18.0 or higher
 - Docker and docker-compose
